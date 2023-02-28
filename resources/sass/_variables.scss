@@ -1,0 +1,208 @@
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: 'Nunito',
+sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Colors
+$blue: #0d6efd;
+$indigo: #6624d1;
+$purple: #6610f2;
+$pink: #d63384;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #198754;
+$teal: #20c997;
+$cyan: #0dcaf0;
+$gray: #adb5bd;
+$brown: rgb(150, 81, 81);
+$white: #fff;
+
+
+.blue {
+    color: $blue;
+}
+
+.bg-blue {
+    background: $blue;
+}
+
+.indigo {
+    color: $indigo;
+}
+
+.bg-indigo {
+    background: $indigo;
+}
+
+.purple {
+    color: $purple;
+}
+
+.bg-purple {
+    background: $purple;
+}
+
+.pink {
+    color: $pink;
+}
+
+.bg-pink {
+    background: $pink;
+}
+
+.red {
+    color: $red;
+}
+
+.bg-red {
+    background: $red;
+}
+
+.orange {
+    color: $orange;
+}
+
+.bg-orange {
+    background: $orange;
+}
+
+.yellow {
+    color: $yellow;
+}
+
+.bg-yellow {
+    background: $yellow;
+}
+
+.green {
+    color: $green;
+}
+
+.bg-green {
+    background: $green;
+}
+
+.teal {
+    color: $teal;
+}
+
+.bg-teal {
+    background: $teal;
+}
+
+.cyan {
+    color: $cyan;
+}
+
+.bg-cyan {
+    background: $cyan;
+}
+
+.brown {
+    color: $brown;
+}
+
+.bg-brown {
+    background: $brown;
+}
+
+.white {
+    color: $white;
+}
+
+.bg-white {
+    background: $white;
+}
+
+.gray {
+    color: $gray;
+}
+
+.bg-gray {
+    background: $gray;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.boxhover:hover {
+    opacity: 0.5;
+    border: 1.2rem;
+}
+
+.icon-size {
+    width: 30px;
+    height: 30px;
+    font-size: 40px;
+    margin-bottom: 0.5rem;
+}
+
+.icon-size-sm {
+    width: 10px;
+    height: 20px;
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+}
+
+.icon-btn {
+    font-size: 20px;
+    padding: 3px 3px 3px 3px;
+}
+
+.icon-btn-sm {
+    font-size: 15px;
+    padding: 3px 3px 3px 3px;
+}
+
+.pagination {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .pagination a {
+    color: white;
+    float: left;
+    font-weight: 500;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .pagination a.active, .pagination a.active:hover {
+    background-color: $indigo;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .pagination a:hover:not(.active) {background-color: rgba(107, 106, 106, 0.781);; color: $white; border-radius: 5px; font-weight: 500;}
+
+  .terms{
+    height: 100%;
+  }
+
+@media print {
+    .nav.nav-tabs li:not(.active){
+        display: none;
+    }
+    footer, header, .main-footer{
+        display: none;
+    }
+
+    .invoice{
+        padding: 10px 20px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        color: black;
+        font-weight: 200;
+    }
+}
+
+

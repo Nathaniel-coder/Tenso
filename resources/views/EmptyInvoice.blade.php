@@ -69,7 +69,8 @@
             <router-link to="/home" class="brand-link pt-2 pb-1">
                 <img src="/img/tenso.drawio.png" class="brand-image img-circle elevation-2" alt=""
                     height="60">
-                <p class="brand-text font-weight-light red" style="padding-left: 3em;">Tens<i class="blue fa fa-earth-asia"></i></p>
+                <p class="brand-text font-weight-light red" style="padding-left: 3em;">Tens<i
+                        class="blue fa fa-earth-asia"></i></p>
             </router-link>
 
             <div class="sidebar">
@@ -160,7 +161,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href={{ url('emptyInvoice') }} class="nav-link">
+                                    <a href={{ url('invoice') }} class="nav-link">
                                         <i class="fa-solid fa-file-invoice-dollar nav-icon"></i>
                                         <p>Invoice</p>
                                     </a>
@@ -268,14 +269,125 @@
         </aside>
 
         <div class="content-wrapper">
-            <router-view :profile="{{ Auth::user() }}"></router-view>
-            <vue-progress-bar></vue-progress-bar>
+            <div class="container">
+                <div class="invoice" style="background: white; color: black">
+                    <div class="row">
+                        <div class="col-7">
+                            <img src="https://s3.eu-central-1.amazonaws.com/zl-clients-sharings/90Tech.png"
+                                class="logo">
+                        </div>
+                        <div class="col-5">
+                            <h1 class="document-type display-4">FACTURE</h1>
+                            <p class="text-right"><strong>N°90T-17-01-0123</strong></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-10">
+                            <p>
+                                <strong>Tenso, inc</strong><br>
+                                Address<br>
+                                Address
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <br><br><br>
+                            <p>
+                                <strong>Customer</strong><br>
+                                Réf. Client <em>C00022</em><br>
+                                12 Rue de Verdun<br>
+                                54250 JARNY
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <h6>Payment Due Date (1er Novembre 2016 - 30 Novembre 2016)</h6>
+                    <br>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Description</th>
+                                <th>Quantité</th>
+                                <th>Unité</th>
+                                <th>PU HT</th>
+                                <th>TVA</th>
+                                <th>Total HT</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Audits et rapports mensuels</td>
+                                <td>1</td>
+                                <td>Jour</td>
+                                <td class="text-right">500,00€</td>
+                                <td>20%</td>
+                                <td class="text-right">500,00€</td>
+                            </tr>
+                            <tr>
+                                <td>Génération des rapports d'activité</td>
+                                <td>4</td>
+                                <td>Rapport</td>
+                                <td class="text-right">800,00€</td>
+                                <td>20%</td>
+                                <td class="text-right">3 200,00€</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="row">
+                        <div class="col-8">
+                        </div>
+                        <div class="col-4">
+                            <table class="table table-sm text-right">
+                                <tr>
+                                    <td><strong>Total HT</strong></td>
+                                    <td class="text-right">3 700,00€</td>
+                                </tr>
+                                <tr>
+                                    <td>TVA 20%</td>
+                                    <td class="text-right">740,00€</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Total TTC</strong></td>
+                                    <td class="text-right">4 440,00€</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <p class="conditions">
+                        En votre aimable règlement
+                        <br>
+                        Et avec nos remerciements.
+                        <br><br>
+                        Conditions de paiement : paiement à réception de facture, à 15 jours.
+                        <br>
+                        Aucun escompte consenti pour règlement anticipé.
+                        <br>
+                        Règlement par virement bancaire.
+                        <br><br>
+                        En cas de retard de paiement, indemnité forfaitaire pour frais de recouvrement : 40 euros (art.
+                        L.4413 et L.4416 code du commerce).
+                    </p>
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+                    <p class="bottom-page text-right">
+                        90TECH SAS - N° SIRET 80897753200015 RCS METZ<br>
+                        6B, Rue aux Saussaies des Dames - 57950 MONTIGNY-LES-METZ 03 55 80 42 62 - www.90tech.fr<br>
+                        Code APE 6201Z - N° TVA Intracom. FR 77 808977532<br>
+                        IBAN FR76 1470 7034 0031 4211 7882 825 - SWIFT CCBPFRPPMTZ
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 
     <footer class="main-footer">
-        <strong>Copyright &copy; 2014-2021 <span class="red">Ten</span><span
-            class="blue">s</span><i class="blue fa fa-earth-asia"></i></strong>
+        <strong>Copyright &copy; 2014-2021 <span class="red">Ten</span><span class="blue">s</span><i
+                class="blue fa fa-earth-asia"></i></strong>
         All rights reserved.
     </footer>
     </div>

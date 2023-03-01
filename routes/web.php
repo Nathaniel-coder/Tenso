@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\InvoiceController;
+use Facade\FlareClient\View;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,9 +34,12 @@ Route::get('/terms', function(){
 Route::get('/receipt&Invoice', 'InvoiceController@index');
 Route::get('/invoiceDropOff/{id}', 'InvoiceController@invoice');
 Route::get('/invoicePickUP/{id}', 'InvoiceController@invoice');
-Route::get('/invoice', function(){
-    return view('invoice');
+Route::get('/emptyInvoice', function(){
+    return View('EmptyInvoice');
 });
+// Route::get('/emptyInvoice', function(){
+//     return View('emptyInvoice');
+// });
 
 
 //Refresh 404- counter

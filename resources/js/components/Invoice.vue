@@ -16,158 +16,136 @@
             </div>
         </section>
         <section class="content" style="@media print{color: black}">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
-                    <div class="col-12">
-
-                        <div class="invoice p-3 mb-3">
-
+                    <div class="col-md-12">
+                        <div class="invoice">
+                            <div class="blue-tag"></div>
                             <div class="row">
-                                <div class="col-12">
-                                    <h4>
-                                        Tens<i class="fa fa-earth-asia"></i>, Inc.
-                                        <small class="float-right">Date: {{  invoice.created_at | Date }}</small>
-                                    </h4>
-                                </div>
+                                <div class="col-7">
 
+                                </div>
+                                <div class="col-5">
+                                    <h1 class="document-type display-4"><span class="red">Tens</span><i
+                                            class="fa fa-earth-asia blue"></i></h1>
+                                    <p class="text-right"><strong>Ref. Code <em>P{{ invoice.created_at | invoiceDate }}-{{
+                                        invoice.id }}</em></strong></p>
+                                </div>
                             </div>
-
-                            <div class="row invoice-info">
-                                <div class="col-sm-4 invoice-col">
-                                    From
-                                    <address>
-                                        <strong>Tens<i class="fa fa-earth-asia"></i>, Inc.</strong><br>
-                                        795 Folsom Ave, Suite 600<br>
-                                        San Francisco, CA 94107<br>
-                                        Phone: (804) 123-5432<br>
-                                        Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
-                                            data-cfemail="6801060e0728090405091b090d0d0c1b1c1d0c0107460b0705">[email&#160;protected]</a>
-                                    </address>
-                                </div>
-
-                                <div class="col-sm-4 invoice-col">
-                                    To <br>
-                                    <strong> {{ invoice.name }} </strong><br>
-                                    Phone: {{ invoice.phone }}<br>
-                                    Email: <a href="#" class="__cf_email__"
-                                        data-cfemail="d7bdb8bfb9f9b3b8b297b2afb6baa7bbb2f9b4b8ba" mailto=pro>{{ profile.email }}</a>
-                                </div>
-
-                                <div class="col-sm-4 invoice-col">
-                                    <b>Invoice #{{ invoice.created_at | invoiceDate }}{{ invoice.id }}</b><br>
-                                    <br>
-                                    <b>Order ID:</b> {{ invoice.created_at | invoiceDate }}{{ invoice.id }}<br>
-                                    <b>Payment Due:</b> {{ invoice.created_at | invoiceDate }}<br>
-                                </div>
-
-                            </div>
-
-
                             <div class="row">
-                                <div class="col-12 table-responsive">
-                                    <table class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>Qty</th>
-                                                <th>Category</th>
-                                                <th>Serial #</th>
-                                                <th>Description</th>
-                                                <th>Subtotal</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Call of Duty</td>
-                                                <td>455-981-221</td>
-                                                <td>El snort testosterone trophy driving gloves handsome</td>
-                                                <td>$64.50</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Need for Speed IV</td>
-                                                <td>247-925-726</td>
-                                                <td>Wes Anderson umami biodiesel</td>
-                                                <td>$50.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Monsters DVD</td>
-                                                <td>735-845-642</td>
-                                                <td>Terry Richardson helvetica tousled street art master</td>
-                                                <td>$10.70</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Grown Ups Blue Ray</td>
-                                                <td>422-568-642</td>
-                                                <td>Tousled lomo letterpress</td>
-                                                <td>$25.99</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                            </div>
-
-                            <div class="row">
-
-                                <div class="col-6">
-                                    <p class="lead">Payment Methods:</p>
-                                    <img src="/img/credit/visa.png" alt="Visa">
-                                    <img src="/img/credit/mastercard.png" alt="Mastercard">
-                                    <img src="/img/credit/american-express.png" alt="American Express">
-                                    <!-- <img src="/img/credit/paypal2.png" alt="Paypal"> -->
-                                    <p class="well well-sm shadow-none" style="margin-top: 10px;">
-                                        Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya
-                                        handango imeem
-                                        plugg
-                                        dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.
+                                <div class="col-9">
+                                    <br><br><br><br>
+                                    <hr>
+                                    <p>
+                                        <strong>{{ invoice.name }}</strong><br>
+                                        Réf. Code <em v-show="profile.type == 'Customer'">C{{ invoice.created_at |
+                                            invoiceDate }}</em>
+                                        <em v-show="profile.type == 'Administrator'">A{{ invoice.created_at | invoiceDate
+                                        }}</em>
+                                        <em v-show="profile.type == 'Driver'">D{{ invoice.created_at | invoiceDate }}</em>
+                                        <em v-show="profile.type == 'Staff'">S{{ invoice.created_at | invoiceDate
+                                        }}</em><br>
+                                        {{ invoice.phone }}<br>
+                                        {{ invoice.date | myDate }}
                                     </p>
                                 </div>
-
-                                <div class="col-6">
-                                    <p class="lead">Amount Due 2/22/2014</p>
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <tr>
-                                                <th style="width:50%">Subtotal:</th>
-                                                <td>$250.30</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Tax (9.3%)</th>
-                                                <td>$10.34</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Shipping:</th>
-                                                <td>$5.80</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Total:</th>
-                                                <td>$265.24</td>
-                                            </tr>
-                                        </table>
-                                    </div>
+                                <div class="col-3">
+                                    <p class="text-right">
+                                        <strong>Tens<i class="fa fa-earth-asia"></i>, inc</strong><br>
+                                        Address<br>
+                                        Address
+                                    </p>
                                 </div>
-
+                            </div>
+                            <br>
+                            <br>
+                            <h6>Payment Due Date : {{ invoice.date | date }}</h6>
+                            <br>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Description</th>
+                                        <th>Quantité</th>
+                                        <th>Unité</th>
+                                        <th>PU HT</th>
+                                        <th>TVA</th>
+                                        <th>Total HT</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Audits et rapports mensuels</td>
+                                        <td>1</td>
+                                        <td>Jour</td>
+                                        <td class="text-right">500,00€</td>
+                                        <td>20%</td>
+                                        <td class="text-right">500,00€</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Génération des rapports d'activité</td>
+                                        <td>4</td>
+                                        <td>Rapport</td>
+                                        <td class="text-right">800,00€</td>
+                                        <td>20%</td>
+                                        <td class="text-right">3 200,00€</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="row">
+                                <div class="col-8">
+                                </div>
+                                <div class="col-4">
+                                    <table class="table table-sm text-right">
+                                        <tr>
+                                            <td><strong>Total HT</strong></td>
+                                            <td class="text-right">3 700,00€</td>
+                                        </tr>
+                                        <tr>
+                                            <td>TVA 20%</td>
+                                            <td class="text-right">740,00€</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Total TTC</strong></td>
+                                            <td class="text-right">4 440,00€</td>
+                                        </tr>
+                                    </table>
+                                </div>
                             </div>
 
+                            <p class="conditions">
+                                For your kind settlement
+                                <br>
+                                And with our thanks.
+                                <br><br>
+                                Terms of payment: payment upon receipt of invoice, before {{ invoice.date | date }}.
+                                <br>
+                                No discount granted for early payment.
+                                <br>
+                                Payment by bank transfer or credit card.
+                                <br><br>
+                                In the event of late payment, fixed compensation for recovery costs: MYR40
+                                (Act 1986s)
+                            </p>
 
-                            <div class="row no-print">
-                                <div class="col-12">
-                                    <a @click.prevent="printMe" rel="noopener" target="_blank" class="btn bg-blue"><i
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <div class="blue-tag"></div>
+                            <div class="col-md-12">
+                                <div class="button">
+                                    <a @click="printMe" rel="noopener" target="_blank" class="btn bg-blue"><i
                                             class="fas fa-print"></i> Print</a>
-                                    <button type="button" class="btn btn-success float-right"><i
-                                            class="far fa-credit-card"></i> Submit
-                                        Payment
-                                    </button>
-                                    <button type="button" class="btn btn-primary float-right" style="margin-right: 5px;">
-                                        <i class="fas fa-download"></i> Generate PDF
-                                    </button>
                                 </div>
                             </div>
+                            <p class="bottom-page text-right">
+                                90TECH SAS - N° SIRET 80897753200015 RCS METZ<br>
+                                    6B, Rue aux Saussaies des Dames - 57950 MONTIGNY-LES-METZ 03 55 80 42 62 -
+                                    www.90tech.fr<br>
+                                    Code APE 6201Z - N° TVA Intracom. FR 77 808977532<br>
+                                    IBAN FR76 1470 7034 0031 4211 7882 825 - SWIFT CCBPFRPPMTZ
+                            </p>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -179,7 +157,7 @@
 <script>
 import Axios from 'axios';
 export default {
-    props:['profile', 'parentData'],
+    props: ['profile', 'parentData'],
     data() {
         return {
             invoice: {},
@@ -189,9 +167,9 @@ export default {
     mounted() {
         console.log('Component mounted.');
     },
-    created(){
+    created() {
         this.generateInvoice();
-        this.$root.$on('message-from-pickUp', (msg)=>{
+        this.$root.$on('message-from-pickUp', (msg) => {
             this.pickUp = msg;
         })
     },

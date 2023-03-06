@@ -5025,38 +5025,63 @@ var render = function render() {
       "@media print{color": "black}"
     }
   }, [_c("div", {
-    staticClass: "container-fluid"
+    staticClass: "container"
   }, [_c("div", {
     staticClass: "row"
   }, [_c("div", {
-    staticClass: "col-12"
+    staticClass: "col-md-12"
   }, [_c("div", {
-    staticClass: "invoice p-3 mb-3"
+    staticClass: "invoice"
   }, [_c("div", {
+    staticClass: "blue-tag"
+  }), _vm._v(" "), _c("div", {
     staticClass: "row"
   }, [_c("div", {
-    staticClass: "col-12"
-  }, [_c("h4", [_vm._v("\n                                    Tens"), _c("i", {
-    staticClass: "fa fa-earth-asia"
-  }), _vm._v(", Inc.\n                                    "), _c("small", {
-    staticClass: "float-right"
-  }, [_vm._v("Date: " + _vm._s(_vm._f("Date")(_vm.invoice.created_at)))])])])]), _vm._v(" "), _c("div", {
-    staticClass: "row invoice-info"
-  }, [_vm._m(1), _vm._v(" "), _c("div", {
-    staticClass: "col-sm-4 invoice-col"
-  }, [_vm._v("\n                                To "), _c("br"), _vm._v(" "), _c("strong", [_vm._v(" " + _vm._s(_vm.invoice.name) + " ")]), _c("br"), _vm._v("\n                                Phone: " + _vm._s(_vm.invoice.phone)), _c("br"), _vm._v("\n                                Email: "), _c("a", {
-    staticClass: "__cf_email__",
-    attrs: {
-      href: "#",
-      "data-cfemail": "d7bdb8bfb9f9b3b8b297b2afb6baa7bbb2f9b4b8ba",
-      mailto: "pro"
-    }
-  }, [_vm._v(_vm._s(_vm.profile.email))])]), _vm._v(" "), _c("div", {
-    staticClass: "col-sm-4 invoice-col"
-  }, [_c("b", [_vm._v("Invoice #" + _vm._s(_vm._f("invoiceDate")(_vm.invoice.created_at)) + _vm._s(_vm.invoice.id))]), _c("br"), _vm._v(" "), _c("br"), _vm._v(" "), _c("b", [_vm._v("Order ID:")]), _vm._v(" " + _vm._s(_vm._f("invoiceDate")(_vm.invoice.created_at)) + _vm._s(_vm.invoice.id)), _c("br"), _vm._v(" "), _c("b", [_vm._v("Payment Due:")]), _vm._v(" " + _vm._s(_vm._f("invoiceDate")(_vm.invoice.created_at))), _c("br")])]), _vm._v(" "), _vm._m(2), _vm._v(" "), _vm._m(3), _vm._v(" "), _c("div", {
-    staticClass: "row no-print"
+    staticClass: "col-7"
+  }), _vm._v(" "), _c("div", {
+    staticClass: "col-5"
+  }, [_vm._m(1), _vm._v(" "), _c("p", {
+    staticClass: "text-right"
+  }, [_c("strong", [_vm._v("Ref. Code "), _c("em", [_vm._v("P" + _vm._s(_vm._f("invoiceDate")(_vm.invoice.created_at)) + "-" + _vm._s(_vm.invoice.id))])])])])]), _vm._v(" "), _c("div", {
+    staticClass: "row"
   }, [_c("div", {
-    staticClass: "col-12"
+    staticClass: "col-9"
+  }, [_c("br"), _c("br"), _c("br"), _c("br"), _vm._v(" "), _c("hr"), _vm._v(" "), _c("p", [_c("strong", [_vm._v(_vm._s(_vm.invoice.name))]), _c("br"), _vm._v("\n                                    Réf. Code "), _c("em", {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: _vm.profile.type == "Customer",
+      expression: "profile.type == 'Customer'"
+    }]
+  }, [_vm._v("C" + _vm._s(_vm._f("invoiceDate")(_vm.invoice.created_at)))]), _vm._v(" "), _c("em", {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: _vm.profile.type == "Administrator",
+      expression: "profile.type == 'Administrator'"
+    }]
+  }, [_vm._v("A" + _vm._s(_vm._f("invoiceDate")(_vm.invoice.created_at)))]), _vm._v(" "), _c("em", {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: _vm.profile.type == "Driver",
+      expression: "profile.type == 'Driver'"
+    }]
+  }, [_vm._v("D" + _vm._s(_vm._f("invoiceDate")(_vm.invoice.created_at)))]), _vm._v(" "), _c("em", {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: _vm.profile.type == "Staff",
+      expression: "profile.type == 'Staff'"
+    }]
+  }, [_vm._v("S" + _vm._s(_vm._f("invoiceDate")(_vm.invoice.created_at)))]), _c("br"), _vm._v("\n                                    " + _vm._s(_vm.invoice.phone)), _c("br"), _vm._v("\n                                    " + _vm._s(_vm._f("myDate")(_vm.invoice.date)) + "\n                                ")])]), _vm._v(" "), _vm._m(2)]), _vm._v(" "), _c("br"), _vm._v(" "), _c("br"), _vm._v(" "), _c("h6", [_vm._v("Payment Due Date : " + _vm._s(_vm._f("date")(_vm.invoice.date)))]), _vm._v(" "), _c("br"), _vm._v(" "), _vm._m(3), _vm._v(" "), _vm._m(4), _vm._v(" "), _c("p", {
+    staticClass: "conditions"
+  }, [_vm._v("\n                            For your kind settlement\n                            "), _c("br"), _vm._v("\n                            And with our thanks.\n                            "), _c("br"), _c("br"), _vm._v("\n                            Terms of payment: payment upon receipt of invoice, before " + _vm._s(_vm._f("date")(_vm.invoice.date)) + ".\n                            "), _c("br"), _vm._v("\n                            No discount granted for early payment.\n                            "), _c("br"), _vm._v("\n                            Payment by bank transfer or credit card.\n                            "), _c("br"), _c("br"), _vm._v("\n                            In the event of late payment, fixed compensation for recovery costs: MYR40\n                            (Act 1986s)\n                        ")]), _vm._v(" "), _c("br"), _vm._v(" "), _c("br"), _vm._v(" "), _c("br"), _vm._v(" "), _c("br"), _vm._v(" "), _c("div", {
+    staticClass: "blue-tag"
+  }), _vm._v(" "), _c("div", {
+    staticClass: "col-md-12"
+  }, [_c("div", {
+    staticClass: "button"
   }, [_c("a", {
     staticClass: "btn bg-blue",
     attrs: {
@@ -5064,14 +5089,11 @@ var render = function render() {
       target: "_blank"
     },
     on: {
-      click: function click($event) {
-        $event.preventDefault();
-        return _vm.printMe.apply(null, arguments);
-      }
+      click: _vm.printMe
     }
   }, [_c("i", {
     staticClass: "fas fa-print"
-  }), _vm._v(" Print")]), _vm._v(" "), _vm._m(4), _vm._v(" "), _vm._m(5)])])])])])])])]);
+  }), _vm._v(" Print")])])]), _vm._v(" "), _vm._m(5)])])])])])]);
 };
 var staticRenderFns = [function () {
   var _vm = this,
@@ -5100,94 +5122,61 @@ var staticRenderFns = [function () {
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
+  return _c("h1", {
+    staticClass: "document-type display-4"
+  }, [_c("span", {
+    staticClass: "red"
+  }, [_vm._v("Tens")]), _c("i", {
+    staticClass: "fa fa-earth-asia blue"
+  })]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
   return _c("div", {
-    staticClass: "col-sm-4 invoice-col"
-  }, [_vm._v("\n                                From\n                                "), _c("address", [_c("strong", [_vm._v("Tens"), _c("i", {
+    staticClass: "col-3"
+  }, [_c("p", {
+    staticClass: "text-right"
+  }, [_c("strong", [_vm._v("Tens"), _c("i", {
     staticClass: "fa fa-earth-asia"
-  }), _vm._v(", Inc.")]), _c("br"), _vm._v("\n                                    795 Folsom Ave, Suite 600"), _c("br"), _vm._v("\n                                    San Francisco, CA 94107"), _c("br"), _vm._v("\n                                    Phone: (804) 123-5432"), _c("br"), _vm._v("\n                                    Email: "), _c("a", {
-    staticClass: "__cf_email__",
-    attrs: {
-      href: "/cdn-cgi/l/email-protection",
-      "data-cfemail": "6801060e0728090405091b090d0d0c1b1c1d0c0107460b0705"
-    }
-  }, [_vm._v("[email protected]")])])]);
+  }), _vm._v(", inc")]), _c("br"), _vm._v("\n                                    Address"), _c("br"), _vm._v("\n                                    Address\n                                ")])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "row"
-  }, [_c("div", {
-    staticClass: "col-12 table-responsive"
-  }, [_c("table", {
+  return _c("table", {
     staticClass: "table table-striped"
-  }, [_c("thead", [_c("tr", [_c("th", [_vm._v("Qty")]), _vm._v(" "), _c("th", [_vm._v("Category")]), _vm._v(" "), _c("th", [_vm._v("Serial #")]), _vm._v(" "), _c("th", [_vm._v("Description")]), _vm._v(" "), _c("th", [_vm._v("Subtotal")])])]), _vm._v(" "), _c("tbody", [_c("tr", [_c("td", [_vm._v("1")]), _vm._v(" "), _c("td", [_vm._v("Call of Duty")]), _vm._v(" "), _c("td", [_vm._v("455-981-221")]), _vm._v(" "), _c("td", [_vm._v("El snort testosterone trophy driving gloves handsome")]), _vm._v(" "), _c("td", [_vm._v("$64.50")])]), _vm._v(" "), _c("tr", [_c("td", [_vm._v("1")]), _vm._v(" "), _c("td", [_vm._v("Need for Speed IV")]), _vm._v(" "), _c("td", [_vm._v("247-925-726")]), _vm._v(" "), _c("td", [_vm._v("Wes Anderson umami biodiesel")]), _vm._v(" "), _c("td", [_vm._v("$50.00")])]), _vm._v(" "), _c("tr", [_c("td", [_vm._v("1")]), _vm._v(" "), _c("td", [_vm._v("Monsters DVD")]), _vm._v(" "), _c("td", [_vm._v("735-845-642")]), _vm._v(" "), _c("td", [_vm._v("Terry Richardson helvetica tousled street art master")]), _vm._v(" "), _c("td", [_vm._v("$10.70")])]), _vm._v(" "), _c("tr", [_c("td", [_vm._v("1")]), _vm._v(" "), _c("td", [_vm._v("Grown Ups Blue Ray")]), _vm._v(" "), _c("td", [_vm._v("422-568-642")]), _vm._v(" "), _c("td", [_vm._v("Tousled lomo letterpress")]), _vm._v(" "), _c("td", [_vm._v("$25.99")])])])])])]);
+  }, [_c("thead", [_c("tr", [_c("th", [_vm._v("Description")]), _vm._v(" "), _c("th", [_vm._v("Quantité")]), _vm._v(" "), _c("th", [_vm._v("Unité")]), _vm._v(" "), _c("th", [_vm._v("PU HT")]), _vm._v(" "), _c("th", [_vm._v("TVA")]), _vm._v(" "), _c("th", [_vm._v("Total HT")])])]), _vm._v(" "), _c("tbody", [_c("tr", [_c("td", [_vm._v("Audits et rapports mensuels")]), _vm._v(" "), _c("td", [_vm._v("1")]), _vm._v(" "), _c("td", [_vm._v("Jour")]), _vm._v(" "), _c("td", {
+    staticClass: "text-right"
+  }, [_vm._v("500,00€")]), _vm._v(" "), _c("td", [_vm._v("20%")]), _vm._v(" "), _c("td", {
+    staticClass: "text-right"
+  }, [_vm._v("500,00€")])]), _vm._v(" "), _c("tr", [_c("td", [_vm._v("Génération des rapports d'activité")]), _vm._v(" "), _c("td", [_vm._v("4")]), _vm._v(" "), _c("td", [_vm._v("Rapport")]), _vm._v(" "), _c("td", {
+    staticClass: "text-right"
+  }, [_vm._v("800,00€")]), _vm._v(" "), _c("td", [_vm._v("20%")]), _vm._v(" "), _c("td", {
+    staticClass: "text-right"
+  }, [_vm._v("3 200,00€")])])])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
     staticClass: "row"
   }, [_c("div", {
-    staticClass: "col-6"
-  }, [_c("p", {
-    staticClass: "lead"
-  }, [_vm._v("Payment Methods:")]), _vm._v(" "), _c("img", {
-    attrs: {
-      src: "/img/credit/visa.png",
-      alt: "Visa"
-    }
-  }), _vm._v(" "), _c("img", {
-    attrs: {
-      src: "/img/credit/mastercard.png",
-      alt: "Mastercard"
-    }
-  }), _vm._v(" "), _c("img", {
-    attrs: {
-      src: "/img/credit/american-express.png",
-      alt: "American Express"
-    }
-  }), _vm._v(" "), _c("p", {
-    staticClass: "well well-sm shadow-none",
-    staticStyle: {
-      "margin-top": "10px"
-    }
-  }, [_vm._v("\n                                    Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya\n                                    handango imeem\n                                    plugg\n                                    dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.\n                                ")])]), _vm._v(" "), _c("div", {
-    staticClass: "col-6"
-  }, [_c("p", {
-    staticClass: "lead"
-  }, [_vm._v("Amount Due 2/22/2014")]), _vm._v(" "), _c("div", {
-    staticClass: "table-responsive"
+    staticClass: "col-8"
+  }), _vm._v(" "), _c("div", {
+    staticClass: "col-4"
   }, [_c("table", {
-    staticClass: "table"
-  }, [_c("tr", [_c("th", {
-    staticStyle: {
-      width: "50%"
-    }
-  }, [_vm._v("Subtotal:")]), _vm._v(" "), _c("td", [_vm._v("$250.30")])]), _vm._v(" "), _c("tr", [_c("th", [_vm._v("Tax (9.3%)")]), _vm._v(" "), _c("td", [_vm._v("$10.34")])]), _vm._v(" "), _c("tr", [_c("th", [_vm._v("Shipping:")]), _vm._v(" "), _c("td", [_vm._v("$5.80")])]), _vm._v(" "), _c("tr", [_c("th", [_vm._v("Total:")]), _vm._v(" "), _c("td", [_vm._v("$265.24")])])])])])]);
+    staticClass: "table table-sm text-right"
+  }, [_c("tr", [_c("td", [_c("strong", [_vm._v("Total HT")])]), _vm._v(" "), _c("td", {
+    staticClass: "text-right"
+  }, [_vm._v("3 700,00€")])]), _vm._v(" "), _c("tr", [_c("td", [_vm._v("TVA 20%")]), _vm._v(" "), _c("td", {
+    staticClass: "text-right"
+  }, [_vm._v("740,00€")])]), _vm._v(" "), _c("tr", [_c("td", [_c("strong", [_vm._v("Total TTC")])]), _vm._v(" "), _c("td", {
+    staticClass: "text-right"
+  }, [_vm._v("4 440,00€")])])])])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("button", {
-    staticClass: "btn btn-success float-right",
-    attrs: {
-      type: "button"
-    }
-  }, [_c("i", {
-    staticClass: "far fa-credit-card"
-  }), _vm._v(" Submit\n                                    Payment\n                                ")]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("button", {
-    staticClass: "btn btn-primary float-right",
-    staticStyle: {
-      "margin-right": "5px"
-    },
-    attrs: {
-      type: "button"
-    }
-  }, [_c("i", {
-    staticClass: "fas fa-download"
-  }), _vm._v(" Generate PDF\n                                ")]);
+  return _c("p", {
+    staticClass: "bottom-page text-right"
+  }, [_vm._v("\n                            90TECH SAS - N° SIRET 80897753200015 RCS METZ"), _c("br"), _vm._v("\n                                6B, Rue aux Saussaies des Dames - 57950 MONTIGNY-LES-METZ 03 55 80 42 62 -\n                                www.90tech.fr"), _c("br"), _vm._v("\n                                Code APE 6201Z - N° TVA Intracom. FR 77 808977532"), _c("br"), _vm._v("\n                                IBAN FR76 1470 7034 0031 4211 7882 825 - SWIFT CCBPFRPPMTZ\n                        ")]);
 }];
 render._withStripped = true;
 
@@ -86950,6 +86939,9 @@ Vue.filter('invoiceDate', function () {
 });
 Vue.filter('Date', function () {
   return moment__WEBPACK_IMPORTED_MODULE_0___default()().format('d/m/Y');
+});
+Vue.filter('date', function () {
+  return moment__WEBPACK_IMPORTED_MODULE_0___default()().format('d-MM-Y');
 });
 
 /**

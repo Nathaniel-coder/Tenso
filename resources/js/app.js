@@ -100,6 +100,9 @@ Vue.filter('invoiceDate', function () {
 Vue.filter('Date', function () {
     return moment().format('d/m/Y');
 })
+Vue.filter('date', function () {
+    return moment().format('d-MM-Y');
+})
 
 /**
  * The following block of code may be used to automatically register your

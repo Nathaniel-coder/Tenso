@@ -27,10 +27,10 @@
                             class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <router-link to="/home" class="nav-link">Home</router-link>
+                    <a href={{ url('home') }} class="nav-link">Home</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <router-link to="/contact" class="nav-link">Contact</router-link>
+                    <a href={{ url('contact') }} class="nav-link">Contact</a>
                 </li>
             </ul>
 
@@ -66,12 +66,12 @@
 
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
-            <router-link to="/home" class="brand-link pt-2 pb-1">
+            <a href="/home" class="brand-link pt-2 pb-1">
                 <img src="/img/tenso.drawio.png" class="brand-image img-circle elevation-2" alt=""
                     height="60">
-                <p class="brand-text font-weight-light red" style="padding-left: 3em;">Tens<i
-                        class="blue fa fa-earth-asia"></i></p>
-            </router-link>
+                <p class="brand-text font-weight-light" style="padding-left: 3em;"><span class="red">Ten</span><span
+                        class="blue">s</span><i class="blue fa fa-earth-asia"></i></p>
+            </a>
 
             <div class="sidebar">
 
@@ -81,7 +81,7 @@
                             alt="User Image">
                     </div>
                     <div class="info">
-                        <span href="#" class="d-block text-capitalize">{{ Auth::user()->name }}</span>
+                        <span href="#" class="d-block text-capitalize text-light">{{ Auth::user()->name }}</span>
                     </div>
                 </div>
 
@@ -102,21 +102,21 @@
                         data-accordion="false">
 
                         <li class="nav-item">
-                            <router-link to="/home" class="nav-link">
+                            <a href="/home" class="nav-link">
                                 <i class="nav-icon fa-solid fa-house-chimney"></i>
                                 <p>
                                     Home
                                 </p>
-                            </router-link>
+                            </a>
                         </li>
                         @can('isAdministrator')
                             <li class="nav-item">
-                                <router-link to="/dashboard" class="nav-link">
+                                <a href="/dashboard" class="nav-link">
                                     <i class="nav-icon fas fa-tachometer-alt"></i>
                                     <p>
                                         Dashboard
                                     </p>
-                                </router-link>
+                                </=>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
@@ -128,28 +128,28 @@
                                 </a>
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
-                                        <router-link to="/staff" class="nav-link">
+                                        <a href="/staff" class="nav-link">
                                             <i class="fa fa-user-tie nav-icon"></i>
                                             <p>Staff</p>
-                                        </router-link>
+                                        </a>
                                     </li>
                                     <li class="nav-item">
-                                        <router-link to="/hr" class="nav-link">
+                                        <a href="/hr" class="nav-link">
                                             <i class="fa fa-id-badge nav-icon"></i>
                                             <p>Human Resource</p>
-                                        </router-link>
+                                        </a>
                                     </li>
                                 </ul>
                             </li>
                         @endcan
 
                         <li class="nav-item">
-                            <router-link to="/contact" class="nav-link">
+                            <a href="/contact" class="nav-link">
                                 <i class="blue nav-icon fas fa-phone" id="contact"></i>
                                 <p>
                                     Contact Us
                                 </p>
-                            </router-link>
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
@@ -167,7 +167,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href={{ url('receipt&Invoice') }} class="nav-link">
+                                    <a href={{ url('Receipts') }} class="nav-link">
                                         <i class="fa-solid fa-file-invoice-dollar nav-icon"></i>
                                         <p>Receipts and Invoices</p>
                                     </a>
@@ -232,21 +232,21 @@
                             </ul>
                         </li> --}}
                         <li class="nav-item">
-                            <router-link to="/profile" class="nav-link">
+                            <a href="/profile" class="nav-link">
                                 <i class="purple nav-icon fas fa-user-astronaut"></i>
                                 <p>
                                     Profile
                                 </p>
-                            </router-link>
+                            </a>
                         </li>
                         @can('isAdministrator')
                             <li class="nav-item">
-                                <router-link to="/developer" class="nav-link">
+                                <a href="/developer" class="nav-link">
                                     <i class="yellow nav-icon fa fa-cogs"></i>
                                     <p>
                                         Developer
                                     </p>
-                                </router-link>
+                                </a>
                             </li>
                         @endcan
                         <li class="nav-item">
@@ -270,7 +270,7 @@
 
         <div class="content-wrapper">
             <div class="container">
-                <div class="invoice" style="background: white; color: black">
+                <div class="invoice card card-widget" style="background: white; color: black">
                     <div class="row">
                         <div class="col-7">
                             <img src="https://s3.eu-central-1.amazonaws.com/zl-clients-sharings/90Tech.png"

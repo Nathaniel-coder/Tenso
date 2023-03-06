@@ -53191,7 +53191,8 @@ a.text-muted:hover {
 
   footer,
   header,
-  .main-footer {
+  .main-footer,
+  .button {
     display: none;
   }
 
@@ -53202,6 +53203,14 @@ a.text-muted:hover {
     color: black;
     font-weight: 200;
   }
+}
+
+.blue-tag {
+  background-color: #0d6efd;
+  width: 100%;
+  height: 2em;
+  margin-bottom: 3em;
+  -webkit-print-color-adjust: exact !important;
 }
 
 .invoice {

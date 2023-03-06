@@ -161,7 +161,7 @@
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href={{ url('emptyInvoice') }} class="nav-link">
-                                        <i class="fa-solid fa-file-invoice-dollar nav-icon"></i>
+                                        <i class="fa-solid fa-file-invoice nav-icon"></i>
                                         <p>Invoice</p>
                                     </a>
                                 </li>
@@ -172,14 +172,14 @@
                                     </a>
 
                                 </li>
-                                @can('Administrator' || 'Staff')
+                                @cannot('isCustomer')
                                     <li class="nav-item">
                                         <a href={{ url('invoice') }} class="nav-link">
-                                            <i class="fa fa-id-badge nav-icon"></i>
+                                            <i class="fa-solid fa-file-contract nav-icon"></i>
                                             <p>Empty consignment</p>
                                         </a>
                                     </li>
-                                @endcan
+                                @endcannot
                             </ul>
                         </li>
                         {{-- <li class="nav-item">

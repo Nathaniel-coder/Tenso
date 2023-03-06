@@ -6,6 +6,7 @@ use App\Dropoff;
 use App\User;
 use App\Branches;
 use App\Http\Controllers\Controller;
+use Barryvdh\DomPDF\PDF;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -115,7 +116,7 @@ class DropOffController extends Controller
      */
     public function show($phone)
     {
-        return Dropoff::where('phone', $phone)->orderBy('created_at', 'DESC')->first();
+        return $data =  Dropoff::where('phone', $phone)->orderBy('created_at', 'DESC')->first();
     }
 
     /**

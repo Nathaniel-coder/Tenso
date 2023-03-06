@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div id="newParcel" class="">
+        <div id="newParcel">
             <section class="content-header">
                 <div class="container-fluid">
                     <div class="row mb-2">

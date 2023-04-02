@@ -167,8 +167,8 @@
                                 </li>
                                 <li class="nav-item">
                                     <a href={{ url('receipt&Invoice') }} class="nav-link">
-                                        <i class="fa-solid fa-file-invoice-dollar nav-icon"></i>
-                                        <p>Receipts and Invoices</p>
+                                        <i class="fa-solid fa-clock nav-icon"></i>
+                                        <p>Order History</p>
                                     </a>
 
                                 </li>

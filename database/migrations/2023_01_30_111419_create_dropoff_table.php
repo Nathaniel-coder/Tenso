@@ -28,7 +28,7 @@ class CreateDropOffTable extends Migration
             $table->string('toaddress2');
             $table->string('topostcode');
             $table->string('tocity');
-            $table->string('weight');
+            $table->string('weight')->nullable();
             $table->string('driverId')->nullable();
             $table->string('vehicleId')->nullable();
             $table->string('status')->nullable();

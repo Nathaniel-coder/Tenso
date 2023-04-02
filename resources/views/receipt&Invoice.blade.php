@@ -175,6 +175,13 @@
                                     </a>
 
                                 </li>
+                                <li class="nav-item">
+                                    <a href={{ url('receipt&Invoice') }} class="nav-link">
+                                        <i class="fa-solid fa-clock nav-icon"></i>
+                                        <p>Order History</p>
+                                    </a>
+
+                                </li>
                                 @can('isAdministrator' || 'isStaff')
                                     <li class="nav-item">
                                         <a href={{ url('invoice') }} class="nav-link">

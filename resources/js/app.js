@@ -11,6 +11,8 @@ import moment from 'moment';
 import VueProgressBar from 'vue-progressbar'
 import { Form, Errors } from 'vform';
 import Swal from 'sweetalert2';
+import Dropzone from "dropzone";
+// import { Chart } from 'chart.js';
 // import { Bootstrap4Pagination } from 'laravel-vue-pagination';
 Window.Form = Form;
 Window.swal = Swal;

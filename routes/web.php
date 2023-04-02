@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\InvoiceController;
 use Facade\FlareClient\View;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\InvoiceController;
 
 /*
 |--------------------------------------------------------------------------

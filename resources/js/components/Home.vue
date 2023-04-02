@@ -20,7 +20,7 @@
                             <div class="card-tools">
                                 <button type="button" class="btn btn-tool nav-icon" data-card-widget="collapse"
                                     title="Collapse">
-                                    <i class="fas fa-angle-down"></i>
+                                    <i class="fas fa-angle-down white"></i>
                                 </button>
 
                             </div>
@@ -46,7 +46,7 @@
                             <div class="card-tools">
                                 <button type="button" class="btn btn-tool nav-icon" data-card-widget="collapse"
                                     title="Collapse">
-                                    <i class="fas fa-angle-down"></i>
+                                    <i class="fas fa-angle-down white"></i>
                                 </button>
 
                             </div>
@@ -56,15 +56,15 @@
                                 <div class="col-lg-3 col-md-4 pointer boxhover text-center" @click="newParcel">
                                     <i class="fa fa-box icon-size teal z-n1 px-3"></i>
                                     <i class="fa-regular fa-circle-check icon-size-sm z-1"></i>
-                                    <p>New Parcel</p>
+                                    <p class="ml-4">New Parcel</p>
                                 </div>
                                 <div class="col-lg-3 col-md-4 pointer boxhover text-center" @click="loadTruck">
                                     <i class="fa fa-truck-ramp-box icon-size blue"></i>
-                                    <p>Load Truck</p>
+                                    <p class="ml-4">Load Truck</p>
                                 </div>
                                 <div class="col-lg-3 col-md-4 pointer boxhover text-center" @click="unloadParcels">
                                     <i class="fa fa-dolly icon-size cyan"></i>
-                                    <p>Unload Parcels</p>
+                                    <p class="ml-4">Unload Parcels</p>
                                 </div>
                                 <div class="col-lg-3 col-md-4 pointer boxhover text-center" @click="branchArrivals">
                                     <i class="fa-solid fa-building-circle-check icon-size blue"></i>
@@ -91,7 +91,7 @@
                             <div class="card-tools">
                                 <button type="button" class="btn btn-tool nav-icon" data-card-widget="collapse"
                                     title="Collapse">
-                                    <i class="fas fa-angle-down"></i>
+                                    <i class="fas fa-angle-down white"></i>
                                 </button>
 
                             </div>
@@ -121,7 +121,7 @@
                             <div class="card-tools">
                                 <button type="button" class="btn btn-tool nav-icon" data-card-widget="collapse"
                                     title="Collapse">
-                                    <i class="fas fa-angle-down"></i>
+                                    <i class="fas fa-angle-down white"></i>
                                 </button>
 
                             </div>
@@ -132,7 +132,7 @@
                                     <i class="fa fa-tornado icon-size z-n1 red position-absolute"></i>
                                     <i class="fa fa-box icon-size yellow z-1 px-3"></i>
                                     <i class="fa fa-fire icon-size z-2 red"></i>
-                                    <p>Disaster (Special Case)</p>
+                                    <p class="ml-3">Disaster <br/>(Special Case)</p>
                                 </div>
                                 <div class="col-lg-3 col-md-4 pointer boxhover text-center" @click="broken">
                                     <i class="fa fa-burst icon-size z-1 red position-absolute"></i>
@@ -259,10 +259,10 @@ export default {
     methods: {
         delivery() {
             //functionn to get to another page in vue
-            this.$router.push('delivery')
+            this.$router.push('/delivery')
         },
         viewShipment() {
-            this.$router.push('shipment')
+            this.$router.push('/shipment')
         },
         transfer() {
             this.$router.push('/transfer')

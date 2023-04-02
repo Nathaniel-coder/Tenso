@@ -22,13 +22,12 @@ class InvoiceController extends Controller
         $phone = Auth::user()->phone;
         $dropOff = '';
         $pickUP = '';
-        $data = [];
-        if($type != 'Customer'){
+        if($type == 'Customer'){
+            $dropOff = Dropoff::where('phone', $phone)->orderBy('created_at', 'DESC')->get();
+            $pickUP = Pickup::where('phone', $phone)->orderBy('created_at', 'DESC')->get();
+        }else{
             $dropOff = Dropoff::all();
             $pickUP = Pickup::all();
-        }else{
-             $dropOff = Dropoff::where('phone', $phone)->orderBy('created_at', 'DESC')->get();
-             $pickUP = Pickup::where('phone', $phone)->orderBy('created_at', 'DESC')->get();
         }
         // return $data = [
         //     'date' => $dropOff->date,

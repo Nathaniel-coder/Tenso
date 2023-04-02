@@ -18,7 +18,7 @@
                                 <h3 class="card-title">Staff</h3>
                                 <div class="card-tools">
                                     <button class="btn bg-blue" type="button" data-toggle="modal"
-                                        data-target="#CreateEdit" @click="newModal()">
+                                        data-target="#CreateEdit" @click="newModal()" toggle="tooltip" title="Create Staff">
                                         <i class="fa-solid fa-plus icon-btn-sm"></i>
                                     </button>
                                 </div>
@@ -55,10 +55,10 @@
                                             <td>{{ user.created_at | myDate }}</td>
                                             <td>{{ user.type | upText }}</td>
                                             <td>
-                                                <button class="btn bg-orange" @click="editModal(user)" toggle="tooltip" title="Edit">
+                                                <button class="btn bg-orange" @click="editModal(user)" toggle="tooltip" title="Edit Staff">
                                                     <i class="fa-solid fa-pen-to-square white"></i>
                                                 </button>
-                                                <button class="btn bg-red" @click="deleteUser(user.id)" toggle="tooltip" title="Delete">
+                                                <button class="btn bg-red" @click="deleteUser(user.id)" toggle="tooltip" title="Delete Staff">
                                                     <i class="fa-solid fa-trash-can"></i>
                                                 </button>
                                             </td>

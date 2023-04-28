@@ -45,7 +45,7 @@ class DashBoardController extends Controller
         //todays sales
         $dropOff = Dropoff::where('created_at', today())->count();
         $pickUp = Pickup::where('created_at', today())->count();
-        $todayOrder = $dropOff = $pickUp;
+        $todayOrder = $dropOff + $pickUp;
 
 
 
